@@ -1,0 +1,9 @@
+version: '3'
+services:
+  dupeguru:
+    image: jlesage/dupeguru
+    ports:
+      - "${PORTS}:5800"
+    volumes:
+      - "${CONFIG}:/config:rw"
+      - "${STORAGE}:/storage:rw"
